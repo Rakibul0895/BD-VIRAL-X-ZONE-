@@ -3,62 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BD VIRAL X ZONE</title>
+  <title>Viral Video Hub</title>
+  <!-- Telegram Web App SDK -->
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <style>
-    body {
-      background-color: #0b0f19;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-      margin: 0;
-    }
-    .header {
-      font-size: 24px;
-      font-weight: bold;
-      color: #38bdf8;
-      margin-bottom: 5px;
-    }
-    .sub-header {
-      font-size: 14px;
-      color: #94a3b8;
-      margin-bottom: 25px;
-    }
-    .btn-card {
-      display: block;
-      background-color: #1e293b;
-      border: 2px solid #f43f5e;
-      border-radius: 12px;
-      padding: 18px;
-      margin-bottom: 15px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #f43f5e;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="header">🎬 Premium Video Hub</div>
-  <div class="sub-header">আপনার পছন্দের ভিডিও প্লে করে উপভোগ করুন</div>
+  <!-- ১৮+ ভেরিফিকেশন পপ-আপ -->
+  <div id="age-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="age-icon">🔞</div>
+      <h2>VERIFY YOUR AGE</h2>
+      <p>আপনার বয়স ১৮ বছরের বেশি হলে নিচের ভেরিফিকেশন বাটন ক্লিক করুন 👇👇👇👇⚠️</p>
+      <button id="enter-btn" class="verify-btn">✅ I AM 18+ & ENTER</button>
+    </div>
+  </div>
 
-  <!-- প্রথম অপশন: celebrity.html পেজে নিয়ে যাবে -->
-  <a href="celebrity.html" class="btn-card">
-    🔥 সেলিব্রিটি ভাইরাল ভিডিও
-  </a>
+  <!-- মূল অ্যাপ কন্টেন্ট (যা পপ-আপের পর দেখাবে) -->
+  <div id="app-content" class="hidden">
+    <header class="header">
+      <h2>Video Hub</h2>
+    </header>
 
-  <!-- দ্বিতীয় অপশন: english.html পেজে নিয়ে যাবে -->
-  <a href="english.html" class="btn-card">
-    ⭐ ইংলিশ ভিডিও ২
-  </a>
+    <!-- ক্যাটাগরি বাটন -->
+    <div class="categories">
+      <button class="cat-btn active">🌐 সবগুলো</button>
+      <button class="cat-btn">🔥 ট্রেন্ডিং</button>
+      <button class="cat-btn">🇷🇺 রাশিয়ান</button>
+      <button class="cat-btn">🇧🇩 দেশী</button>
+    </div>
 
-  <script>
-    const tg = window.Telegram.WebApp;
-    tg.expand();
-    tg.ready();
-  </script>
+    <!-- ভিডিও গ্রিড -->
+    <div class="video-grid">
+      <div class="video-card">
+        <img src="https://via.placeholder.com/300x200" alt="Thumb">
+        <h3>ট্রেন্ডিং ভিডিও - সবার সেরা</h3>
+        <button onclick="openLink('https://t.me/your_channel')">▶ দেখুন</button>
+      </div>
+    </div>
+  </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
