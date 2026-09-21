@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ইংলিশ ভিডিও সমূহ</title>
+    <style>
+        body { background-color: #0b0f19; color: white; font-family: sans-serif; padding: 15px; margin: 0; }
+        .back-btn { color: #38ef7d; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 15px; }
+        
+        /* ক্যাটাগরি বাটন ডিজাইন */
+        .category-container { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 15px; }
+        .cat-btn { background-color: #1a2332; color: #fff; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 14px; white-space: nowrap; }
+        .cat-btn.active { background: linear-gradient(90deg, #ff4e50, #f9d423); color: black; font-weight: bold; }
+
+        /* ভিডিও কার্ড ডিজাইন */
+        .video-card { background: #161f30; padding: 12px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #2a384c; }
+        .video-title { color: #ff4b2b; margin-top: 0; margin-bottom: 10px; font-size: 16px; }
+        iframe { width: 100%; height: 260px; border: none; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+    <!-- ব্যাকে যাওয়ার লিংক -->
+    <a href="index.html" class="back-btn">← হোম পেজে ফিরে যান</a>
+
+    <!-- ক্যাটাগরি মেনু -->
+    <div class="category-container">
+        <a href="english_video.html" class="cat-btn active">⭐ ইংলিশ</a>
+        <a href="kids.html" class="cat-btn">🧍 বাচ্চাদের</a>
+        <a href="deshi.html" class="cat-btn">🏠 দেশী</a>
+        <a href="celebrity.html" class="cat-btn">🔥 সেলিব্রিটি</a>
+    </div>
+
+    <h2 style="color: #38ef7d;">⭐ ইংলিশ ভিডিও সমূহ</h2>
+
+    <!-- ১ম ভিডিও -->
+    <div class="video-card">
+        <h3 class="video-title">প্রথম ভিডিওর নাম</h3>
+        <!-- নিচে src-এর ভেতর আপনার ১ম ভিডিওর টেলিগ্রাম এম্বেড লিংক বসান -->
+        <iframe src="আপনার_১ম_টেলিগ্রাম_ভিডিও_লিংক"></iframe>
+    </div>
+
+    <!-- ২য় ভিডিও -->
+    <div class="video-card">
+        <h3 class="video-title">দ্বিতীয় ভিডিওর নাম</h3>
+        <!-- নিচে src-এর ভেতর আপনার ২য় ভিডিওর টেলিগ্রাম এম্বেড লিংক বসান -->
+        <iframe src="আপনার_২য়_টেলিগ্রাম_ভিডিও_লিংক"></iframe>
+    </div>
+
+</body>
+</html>
